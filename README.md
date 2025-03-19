@@ -1,7 +1,7 @@
-# Flac Converter and YT Downloader
+# Youtube Saver
 
 ## Overview
-The Flac Converter and YT Downloader is a local website that uses a python backend to download youtube videos through URL as well as converting MP4 files to Flac files. 
+Youtube Saver is a locally hosted web application powered by a Python backend. It enables users to download YouTube videos via a URL to a MP4 file with the option to also convert them to high-quality FLAC audio files. Offering a seamless and efficient solution, Youtube Saver combines video downloading and audio conversion in one platform.
 
 ## Key Components
 
