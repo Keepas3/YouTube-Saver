@@ -3,8 +3,12 @@ from flask import Flask, request, redirect, url_for, render_template
 from moviepy import VideoFileClip, AudioFileClip
 import pytubefix
 from pytubefix import YouTube
+import re
 
 Server = Flask(__name__)
+
+def clean_filename(title):
+    return re.sub(r'[\\/*?:"<>|]', "", title)
 
 def create_flac_output_folder(): 
     user_home = os.path.expanduser('~') 
@@ -65,6 +69,7 @@ def convert():
     if youtube_url:
         yt = YouTube(youtube_url,use_po_token=True)
         video_title =yt.title
+        video_title = clean_filename(video_title)
         mp4_path = os.path.join(UPLOAD_FOLDER, f'{video_title}.mp4')
         try:
             download_youtube_video(youtube_url, UPLOAD_FOLDER)

@@ -5,53 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="color-scheme" content="dark light">
     <title>Result Page</title>
-    <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            font-family: Arial, sans-serif;
-        }
-        .container {
-            text-align: center;
-            padding: 1rem;
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/Legend.png') }}">
+    <link rel="stylesheet" href="/css/styles.css">
 
-            border-radius: 10px;
-            
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        .container button[type="button"] {
-            padding: 10px 20px;
-            border-radius: 5px;
-            border: none;
-            background-color: #4285f4;
-            color: white;
-            font-size: 16px;
-            cursor: pointer;
-            margin-top: 20px;
-            transition: background-color 0.3s;
-        }
-        .container button[type="button"]:hover {
-            background-color: #8b8be3;
-        }
-        .result-message {
-            border: 1px solid #9c9999;
-            border-radius: 5px;
-            padding: 1rem;
-          
-            margin: 1rem 0;
-        }
-        .google-drive-link img {
-            width: 50px; /* Adjust size as needed */ 
-            height: 50px;
-            cursor:pointer
-          
-        }
-    </style>
 </head>
-<body>
+<body class = "result-page">
     <div class="container">
         <h1>Conversion Results:</h1>
         <hr>
@@ -62,7 +20,7 @@
     <br><br>
     <p class="google-drive-link">
         <a href = "https://drive.google.com/" target ="_blank"> 
-            <img src="{{ url_for('static', filename='images/GDrive.png')}}" alt ="Google Drive">
+            <img src="{{ url_for('static', filename='images/Google_Drive.png')}}" alt ="Google Drive">
          </a>
     </p>
 </div>

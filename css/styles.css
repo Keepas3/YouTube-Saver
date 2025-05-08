@@ -1,0 +1,91 @@
+
+
+
+
+.index-page {
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
+    height: 100vh; 
+    margin: 0; 
+    font-family: Arial, sans-serif;
+}
+.index-page .container {
+    text-align: center;
+}
+.index-page .container input[type="text"] {
+    width: 80%; 
+    padding: 10px; 
+    border-radius: 5px; 
+    border: 1px solid #ccc; 
+    font-size: 16px; 
+    margin-top: 20px;
+    background: #8646b0;
+}
+.index-page .container button[type="submit"] {
+    padding: 12px 20px; 
+    border-radius: 10px; 
+    border: none; 
+    background-color: #4285f4; 
+    color: white; 
+    font-size: 16px; 
+    cursor: pointer; 
+    margin-top: 20px; 
+    transition: background-color 0.3s;
+    transition-duration: 0.4s;
+}
+.index-page .container button[type="submit"]:hover {
+    background-color: #8b8be3; 
+}
+.index-page .container input[type="file"] {
+    padding-right: 20px;
+}
+
+
+
+
+
+.result-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.result-page .container {
+    text-align: center;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.result-page .container button[type="button"] {
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: #4285f4;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+.result-page .container button[type="button"]:hover {
+    background-color: #8b8be3;
+}
+
+.result-page .result-message {
+    border: 1px solid #9c9999;
+    border-radius: 5px;
+    padding: 1rem;
+    margin: 1rem 0;
+}
+
+.result-page .google-drive-link img {
+    width: 80px; /* Adjust size as needed */
+    height: 80px;
+    cursor: pointer;
+}
