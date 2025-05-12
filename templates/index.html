@@ -6,22 +6,41 @@
     <meta name="color-scheme" content="dark light">
     <link rel="stylesheet" href="/css/styles.css">
 
-    <title>FLAC Converter & YT Video Downloader</title>
+    <title>YouTube Saver</title>
     <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/Legend.png') }}">
 
-    <style>
-        body {
-            display: flex; 
+     <style>
+        .index-page {
             justify-content: center;
             align-items: center; 
             height: 100vh; 
             margin: 0; 
             font-family: Arial, sans-serif;
         }
-        .container {
-            text-align: center;
+
+        .index-page .header {
+            text-align: center; 
+            margin-bottom: 50px; 
         }
-        .container input[type="text"] {
+
+        .index-page .header h1 {
+            font-size: 36px;
+            color: #ffcc00;
+            margin-bottom: 20px;
+        }
+
+        .index-page .header p {
+            font-size: 18px;
+            line-height: 1.6;
+            
+        }
+
+        .index-page .container {
+            text-align: center;
+            margin-top: 35px;
+        }
+
+        .index-page .container input[type="text"] {
             width: 80%; 
             padding: 10px; 
             border-radius: 5px; 
@@ -30,7 +49,8 @@
             margin-top: 20px;
             background: #8646b0;
         }
-        .container button[type="submit"] {
+
+        .index-page .container button[type="submit"] {
             padding: 12px 20px; 
             border-radius: 10px; 
             border: none; 
@@ -42,29 +62,45 @@
             transition: background-color 0.3s;
             transition-duration: 0.4s;
         }
-        .container button[type="submit"]:hover {
+
+        .index-page .container button[type="submit"]:hover {
             background-color: #8b8be3; 
         }
-        .container input[type="file"] {
+
+        .index-page .container input[type="file"] {
             padding-right: 20px;
+        }
+
+        .index-page .tutorial {
+            text-align: center; 
+            margin-top: 70px; 
+            font-size: 14px; 
+            line-height: 1.6;
+        }
+        .index-page .tutorial h2 {
+            color: #ffcc00;
+            margin-bottom: 20px;
+            text-align: center;  
+            font-size: 36px; 
+            line-height: 1.6;
         }
     </style>
 </head>
 <body class = "index-page">
-    <div class="container"> 
-        <h1>FLAC Converter & YT Video Downloader</h1> 
-        <hr>
+    <div class="header"> 
+        <h1>YouTube Saver</h1> 
+        
         <p>Convert your MP4 files to FLAC format or download YouTube videos directly!</p>
         <p>Note: The conversion process may take some time depending on the file size.</p>
     <div class="container"> 
         <h1>Download / Convert: </h1> 
         <hr>
         <form action="/convert" method="post" enctype="multipart/form-data"> 
- <!--
+<!--  
             <a href = "https://en.wikipedia.org/wiki/Shrek">
                 <img src="{{ url_for('static', filename='images/MasterLeague.png') }}" height =200 width =200 alt="This is a legend picture" title = "league">
-             </a>
-            -->
+             </a> -->
+           
             <br>
             <label for="mp4_file">Choose a video file: </label> 
             <br>
@@ -79,6 +115,18 @@
             <button type="submit">Submit</button> 
         </form> 
     </div>
+    <div class = "tutorial">
+        <h2> How to Use:</h2>
+        <hr>
+        <p>1. Choose an MP4 file from your device or enter a YouTube URL.</p>
+        <p>2. Click the "Submit" button to start the conversion or download process.</p>
+        <p>3. Wait for the process to complete. The file will be available on your desktop.</p>
+        <p>4. Check "Downloaded YouTube Videos" or "Converted Flac Files"!</p>
+        <p>5. Enjoy your downloaded video.</p>
+        <p>6. If you have any questions, please contact us.</p>
+
+
+        </div>
     <script> //Javascript
         // function showPopUp() {
         //     var form = document.createElement('form'); //creates the form
