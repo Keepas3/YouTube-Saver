@@ -45,7 +45,7 @@
 .result-page .container h1 {
     font-size: 36px;
     color: #ffcc00;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 }
 .result-page .result-message {
     border: 1px solid #9c9999;
@@ -59,22 +59,44 @@
     height: 80px;
     cursor: pointer;
 }
+.result-page .dropbox-link img {
+    width: 80px; /* Adjust size as needed */
+    height: 80px;
+    cursor: pointer;
+}
+.result-page .platforms {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
     </style>
 </head>
 <body class = "result-page">
     <div class="container">
-        <h1>Conversion Results:</h1>
-        <hr>
-        <div class="result-message" id="resultMessage"></div>
-        <p>
-            <button type="button" onclick="backToHomePage()">Back to Home Page</button>
-        </p>
-    <br><br>
-    <p class="google-drive-link">
-        <a href = "https://drive.google.com/" target ="_blank"> 
-            <img src="{{ url_for('static', filename='images/Google_Drive.png')}}" alt ="Google Drive">
-         </a>
+    <h1>Conversion Results:</h1>
+    <hr>
+    <div class="result-message" id="resultMessage"></div>
+    <p>
+        <button type="button" onclick="backToHomePage()">Back to Home Page</button>
     </p>
+    <br><br>
+
+    <!-- Move platforms inside the container -->
+    <div class="platforms">
+        <h1>Access your downloaded files on other platforms here:</h1>
+        <br> <br>
+        <p class="google-drive-link">
+            <a href="https://drive.google.com/" target="_blank">
+                <img src="{{ url_for('static', filename='images/Google_Drive.png')}}" alt="Google Drive">
+            </a>
+        </p>
+        <p class="dropbox-link">
+            <a href="https://www.dropbox.com/" target="_blank">
+                <img src="{{ url_for('static', filename='images/Dropbox.png')}}" alt="Dropbox">
+            </a>
+
+    </div>
 </div>
     <script>
         function backToHomePage() {
